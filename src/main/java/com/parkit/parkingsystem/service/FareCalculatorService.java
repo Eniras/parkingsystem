@@ -16,7 +16,7 @@ public class FareCalculatorService {
         long outHour = ticket.getOutTime().getTime();
 
         //TODO: Some tests are failing here. Need to check if this logic is correct
-        double duration = TimeUnit.HOURS.convert(outHour - inHour,TimeUnit.MILLISECONDS)/60.0;
+        double duration = TimeUnit.HOURS.convert(outHour - inHour,TimeUnit.MILLISECONDS);
 
         if(duration == 0){
             //on a une diff inférieure a 1 heure donc cacul en fraction d'heure avec un double
